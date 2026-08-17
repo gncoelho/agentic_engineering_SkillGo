@@ -1,0 +1,18 @@
+# Segredos — nunca versionar. O modelo público é o .env_example, sempre com
+# valores vazios.
+.env
+.env.local
+*.key
+
+# Ambientes
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
