@@ -119,7 +119,12 @@ cd Aula04/Projeto_Docker_ADK_Agent_Studio
 Crie o arquivo local:
 
 ~~~bash
-cp .env.example .env
+Verbo | Significado | Exemplo |
+|---|---|---|
+| Executar | Iniciar o agente para uma interação local | Rodar no terminal |
+| Servir | Expor o agente por uma interface de rede | API HTTP |
+| Empacotar | Produzir uma unidade reproduzível | Imagem Docker |
+| Publicar | Disponibilizar a unidade em um ambiente acessível | Cloud Run, GKE ou outro runtime
 ~~~
 
 Edite .env:
