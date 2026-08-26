@@ -18,6 +18,7 @@ RUN pip install --upgrade pip \
 COPY agents ./agents
 COPY services ./services
 COPY shared ./shared
+COPY data ./data
 
 # O ADK Web é uma interface de desenvolvimento. O usuário sem privilégios
 # também recebe permissão sobre o ambiente para os assets de runtime da UI.

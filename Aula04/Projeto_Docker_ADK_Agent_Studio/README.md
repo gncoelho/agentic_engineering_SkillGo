@@ -1,7 +1,8 @@
 # SkillGo Travel Assistant — Docker + ADK Web
 
-Este diretório executa em Docker o mesmo agente construído no notebook
-Aula04_Lab01_Agente_ADK_Passo_a_Passo.ipynb.
+Este é um projeto Python standalone: todo o código-fonte, o corpus do RAG,
+as dependências e a configuração Docker necessários para executar os agentes
+estão neste diretório. Nenhum arquivo externo da aula é importado.
 
 O projeto oferece:
 
@@ -81,6 +82,11 @@ Projeto_Docker_ADK_Agent_Studio/
 │       └── agent.py
 ├── shared/
 │   └── market_tools.py
+├── data/
+│   ├── guia_clima.md
+│   ├── guia_fontes.md
+│   ├── politica_cambio_skillgo.md
+│   └── politica_viagens_skillgo.md
 ├── .env.example
 ├── compose.yaml
 ├── Dockerfile
@@ -142,10 +148,10 @@ docker compose ps
 
 Resultado esperado:
 
-| Serviço | Porta | Papel |
+| Serviço | Porta local | Papel |
 |---|---:|---|
-| agent-studio | 8000 | interface ADK Web |
-| exchange-agent | 8001 | especialista remoto A2A |
+| agent-studio | 8090 | interface ADK Web |
+| exchange-agent | 8091 | especialista remoto A2A |
 
 Abra:
 
@@ -274,8 +280,8 @@ docker compose start exchange-agent
 
 ## 10. Desenvolvimento com recarga
 
-O Compose monta agents/ e shared/ dentro do contêiner. Alterações nesses arquivos podem ser
-recarregadas pelo servidor de desenvolvimento.
+O Compose monta agents/, shared/ e data/ dentro do contêiner. Alterações nesses arquivos podem
+ser recarregadas pelo servidor de desenvolvimento.
 
 Se a versão instalada não recarregar automaticamente:
 

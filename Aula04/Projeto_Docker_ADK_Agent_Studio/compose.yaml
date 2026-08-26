@@ -61,6 +61,7 @@ services:
     volumes:
       - ./agents:/app/agents:ro
       - ./shared:/app/shared:ro
+      - ./data:/app/data:ro
     healthcheck:
       test:
         - CMD
